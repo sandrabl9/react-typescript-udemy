@@ -5,12 +5,17 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+
+import {
+  RegisterPage,
+  FormikAbstraction,
+  FormikComponents,
+  FormikYupPage,
+  FormikBasicPage,
+} from "../03-forms/pages";
+
 import logo from "../logo.svg";
 import "../index.css";
-import { RegisterPage } from "../03-forms/pages/RegisterPage";
-import { FormikBasicPage } from "../03-forms/pages/FormikBasicPage";
-import { FormikYupPage } from "../03-forms/pages/FormikYupPage";
-import { FormikComponents } from "../03-forms/pages/FormikComponents";
 
 export const Navigation = () => {
   return (
@@ -59,6 +64,14 @@ export const Navigation = () => {
                 FormikComponents
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/formik-abstraction"
+                className={({ isActive }) => (isActive ? "nav-active" : "")}
+              >
+                FormikAbstraction
+              </NavLink>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -67,6 +80,7 @@ export const Navigation = () => {
           <Route path="formik-basic" element={<FormikBasicPage />} />
           <Route path="formik-yup" element={<FormikYupPage />} />
           <Route path="formik-components" element={<FormikComponents />} />
+          <Route path="formik-abstraction" element={<FormikAbstraction />} />
 
           <Route path="/*" element={<Navigate to="/" replace />} />
         </Routes>

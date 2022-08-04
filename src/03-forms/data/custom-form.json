@@ -4,21 +4,88 @@
     "name": "firstName",
     "placeholder": "Sandra",
     "label": "First Name",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
   },
   {
     "type": "input",
     "name": "lastName",
     "placeholder": "Bretones",
     "label": "Last Name",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 3
+      }
+    ]
   },
   {
     "type": "email",
     "name": "email",
     "placeholder": "email@email.com",
     "label": "Email",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "email"
+      }
+      ]
+  },
+  {
+    "type": "password",
+    "name": "password",
+    "placeholder": "********",
+    "label": "Password",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 6
+      }
+    ]
+  },
+
+  {
+    "type": "select",
+    "name": "select",
+    "label": "Select an option",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "Monday"
+      },
+      {
+        "id": 2,
+        "label": "Tuesday"
+      },
+      {
+        "id": 3,
+        "label": "Wednesday"
+      },
+      {
+        "id": 4,
+        "label": "Thursday"
+      }
+    ]
   }
 
 ]
